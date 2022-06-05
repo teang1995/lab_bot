@@ -3,7 +3,6 @@ asgiref==3.5.0
 certifi==2021.10.8
 charset-normalizer==2.0.12
 click==8.1.2
-colorama==0.4.4
 fastapi==0.75.1
 Flask==2.1.2
 GPUtil==1.4.0
@@ -25,5 +24,4 @@ typing_extensions==4.1.1
 urllib3==1.26.9
 uvicorn==0.17.6
 Werkzeug==2.1.2
-wincertstore==0.2
 zipp==3.8.0
