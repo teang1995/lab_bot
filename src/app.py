@@ -87,15 +87,16 @@ def event_handler(event_type, slack_event):
 
 
 
-@app.route('/', methods=['POST'])
+@app.route('/test', methods=['POST'])
 
 def hello_there():
-
+    
     slack_event = json.loads(request.data)
 
     if "challenge" in slack_event:
 
-        return jsonify(slack_event['challenge'])
+        # return jsonify(slack_event['challenge'])
+        return make_response("healthy", 200)
 
     if "event" in slack_event:
 
@@ -105,7 +106,15 @@ def hello_there():
 
     return make_response("There are no slack request events", 404, {"X-Slack-No-Retry": 1})
 
+@app.route('/', methods=['GET'])
 
+def heath_check():
+    return make_response("healthy", 200)
+
+@app.route('/', methods=['POST'])
+
+def heath_check2():
+    return make_response("healthy2", 200)
 
 
 
